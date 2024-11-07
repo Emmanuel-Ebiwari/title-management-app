@@ -49,7 +49,7 @@ Your `.env.local` file should contain the following:
 NEXT_PUBLIC_BASE_URL=<BASE_URL>
 ```
 
-Replace `<API_URL>` and `<BASE_URL>` with your actual API endpoints.
+Replace `<BASE_URL>` with your actual API endpoints.
 
 ## Usage
 
