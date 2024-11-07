@@ -47,7 +47,6 @@ Your `.env.local` file should contain the following:
 
 ```plaintext
 NEXT_PUBLIC_BASE_URL=<BASE_URL>
-# Add other environment variables as required
 ```
 
 Replace `<API_URL>` and `<BASE_URL>` with your actual API endpoints.
