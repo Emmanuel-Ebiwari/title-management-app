@@ -9,6 +9,7 @@ import React, {
 import { clearCache } from "@/utils";
 import { useRouter } from "next/router";
 import { isTokenExpired } from "@/services";
+import { toast } from "sonner";
 
 // interface User {
 //     username: string;
@@ -72,8 +73,9 @@ export const AuthContextProvider: React.FC<AuthContextProviderProps> = ({
             router?.pathname === "/dashboard" &&
             isTokenExpired(token)
         ) {
-            localStorage.removeItem("gp_token");
-            window.location.href = "/signin"; // Redirect to login page if no valid token
+            toast.error("Token expired, signin again")
+            logoutUser();
+            // window.location.href = "/signin"; // Redirect to login page if no valid token
         }
     }, [router?.pathname]);
 
