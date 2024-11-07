@@ -1,3 +1,86 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "next/core-web-vitals",
+        "next/typescript",
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:import/recommended",
+        "prettier",
+        "next"
+    ],
+    "overrides": [],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": ["react", "prettier", "import"],
+    "rules": {
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1,
+                "ignoredNodes": ["ConditionalExpression"]
+            }
+        ],
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "lf",
+                "tabWidth": 4
+            }
+        ],
+        "no-unused-vars": "off",
+        // "no-unused-vars": [
+        //     "error",
+        //     {
+        //         "varsIgnorePattern": "^_"
+        //     }
+        // ],
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }
+        ],
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
+        "linebreak-style": ["error", "unix"],
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-uses-vars": "error",
+        "react/prop-types": "off",
+        "react/no-unescaped-entities": [
+            "error",
+            {
+                "forbid": [">", "}"]
+            }
+        ],
+        "quotes": ["error", "double"],
+        "semi": ["error", "always"],
+        "@typescript-eslint/no-empty-interface": "off",
+        "@typescript-eslint/no-empty-object-type": "off",
+        "import/no-named-as-default": "off",
+        "@typescript-eslint/no-explicit-any": "off"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        },
+        "import/resolver": {
+            "typescript": {
+                "project": "./tsconfig.json"
+            },
+            "node": {
+                "extensions": [".ts", ".tsx"],
+                "moduleDirectory": ["node_modules", "src/"]
+            },
+            "alias": {
+                "map": [["@", "./src"]],
+                "extensions": [".ts", ".tsx"]
+            }
+        }
+    }
 }

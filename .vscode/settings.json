@@ -1,0 +1,19 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit",
+        "source.fixAll.format": "explicit"
+    },
+    "eslint.codeActionsOnSave.mode": "all",
+    "editor.formatOnSaveMode": "file", // required to format on save
+    // "vs-code-prettier-eslint.prettierLast": false, // set as "true" to run 'prettier' last not first
+    "eslint.debug": false,
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}
