@@ -21,9 +21,8 @@ A web application designed to manage titles and related metadata efficiently.
 
 ## Prerequisites
 Ensure you have the following installed:
-- Node.js (v14+ recommended)
+- Node.js (v20 recommended)
 - npm or yarn
-- A compatible database (e.g., MongoDB, MySQL) if applicable
 
 ## Installation
 
@@ -84,17 +83,18 @@ npm run start
 yarn start
 ```
 
-### Linting
-To check and fix linting issues:
+### Package.json Scripts
 
-```bash
-npm run lint
-# or
-yarn lint
-```
+| Script     | Description                                                |
+|------------|------------------------------------------------------------|
+| `dev`      | Runs the Next.js development server on port 3001.          |
+| `build`    | Builds the Next.js application for production.             |
+| `start`    | Starts the Next.js application in production mode.         |
+| `lint`     | Lints the codebase using Next.js's linting configuration.  |
+| `format`   | Formats `.ts`, `.tsx`, and `.json` files using Prettier.   |
+| `lint:fix` | Fixes linting errors across the codebase using Next.js.    |
+| `test`     | Runs tests using Jest.                                     |
 
-### Testing
-(Include instructions if you have tests set up, such as with Jest or Cypress.)
 
 ## Project Structure
 
